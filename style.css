@@ -1,0 +1,152 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: white;
+    --font-size-large: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cấu hình chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: #333;
+    line-height: 1.6;
+    padding: 0 50px;
+    font-size: var(--font-size-large);
+}
+
+/* Header */
+header {
+    background-color: #008080;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Nội dung chính */
+section {
+    margin: 20px 0;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #008080;
+}
+
+section p, section ul {
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Liên hệ */
+section a {
+    color: #008080;
+    text-decoration: none;
+}
+
+/* Chân trang */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Định dạng hình ảnh */
+
+.hover:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+/* Media Queries - Responsive */
+
+/* Màn hình lớn hơn 1024px (máy tính) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    img {
+        max-width: 20%;
+    }
+}
+
+/* Màn hình lớn hơn 768px (máy tính bảng) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 18px;
+    }
+
+    #about img {
+        max-width: 30%;
+    }
+}
+
+/* Màn hình nhỏ hơn 768px (điện thoại) */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    #about img {
+        max-width: 50%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
